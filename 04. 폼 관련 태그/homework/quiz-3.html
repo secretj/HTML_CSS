@@ -1,82 +1,88 @@
 <!doctype html>
 <html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<title>링크 사용하기</title>
-	<style>
-        ul{
-            list-style: none;
+   <meta charset="utf-8">
+   <title>링크 사용하기</title>
+   <style>
+        form fieldset{
+            margin: 20px 0;
         }
-        li{
-            margin:10px;
+        form legend{
+            font-size: 18px;
+            color: purple;
+            font-weight: 600;
         }
-		</style>
-
-	
+        form label.reg{
+            font-size: 16px;
+            width: 120px;
+            float: left;
+        }
+      form label.ref{
+            font-size: 16px;
+            width: 120px;
+            float: left;
+        }
+        form ul li{
+            list-style:none;
+            margin: 10px 0;
+        }
+        form.goodprogrammers{
+            text-align: left;
+            font-size: 12px;
+            color : blue;
+        }
+    </style>
 </head>
 <body>
-	<h1>상품 주문서</h1>
-	<fieldset>
-		<legend>개인 정보</legend>
-		<ul>
-			<li>
-				<label>이름</label>
-				<input type="text" size="20" placeholder="여백없이 입력">
-				
-				</li>
-			<li>
-				<label>연락처</label>
-					<input type="tel" size="20" placeholder="연락가능한 번호">
-				
-			</li>
-	</fieldset>
+   <form >
+      <h1>상품 주문서</h1>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+            <li>
+                    <label class="reg" for="new_id">이름</label>
+                    <input type="text" id="new_id" size="20" autocomplete="on" required placeholder="여백없이 입력">
+                </li>
+                <li>
+                    <label class="reg" for="new_pw1">연락처<em></em></label>
+                    <input type="password" id="new_pw1" size="20" required placeholder="연락가능한 번호">
+            </li>
+        </fieldset>
+        <fieldset>
+            <legend>배송지 정보</legend>
+            <ul>
+            <li>
+               <label class="ref" for="address">주소</label>
+                    <input type="text" id="address" size="40" autocomplete="on" required>
+            </li>
+            <li>
+               <label class="reg" for="tel">전화번호</label>
+                    <input type="text" id="tel" size="20" autocomplete="on" required>
+            </li>
+            <li>
+               <label class="ref" for="memo">메 모</label>
+               <textarea name="memo" cols="40" rows="5" ></textarea>
+            </li>
+        </fieldset>
+      <fieldset>
+         <legend>주문 정보</legend>
+         <ul>
+            <li>
+               <label for=""><input type="checkbox" name="info1">과테말라 안티구아 (100g) <input type="text" size="5" placeholder="0">개</label>
+            </li>
+            <li>
+               <label for=""><input type="checkbox" name="info1">인도네시아 만델링 (100g) <input type="text" size="5" placeholder="0">개</label>
+            </li>
+            <li>
+               <label for=""><input type="checkbox" name="info1">탐라는도다(블렌딩) (100g) <input type="text" size="5" placeholder="0" >개</label>
+            </li>
+         </ul>
+      </fieldset>
+      <ul style="text-align: center;">
+            <input type="submit" value="주문하기" align=center>
+            <input type="reset" value="다시 작성" align=center>
+      </ul>
 
-	<fieldset>
-		<legend>배송지 정보</legend>
-		<ul>
-			<li>
-				<label> 주소</label>
-					<input type="text" size="50">
-				
-			</li>
-			<label>전화번호</label>
-				<input type="tel" size="20">
-
-			
-			<li>
-				<label>메모</label>
-					<textarea name="memo" cols="50" rows="3">
-					</textarea>
-			</li>
-		</ul>
-	</fieldset>
-
-	<fieldset>
-		<legend>주문 정보</legend>
-		<ul>
-			<li>
-				<label>
-					<input type="checkbox">과테말라 안티구아(100g)
-					<input type="number" size="5" value="0">개
-				</label>
-			</li>
-			<li>
-				<label>
-					<input type="checkbox">인도네시아 만델링 (100g)
-					<input type="number" size="5" value="0">개
-				</label>
-			</li>
-			<li>
-				<label>
-					<input type="checkbox">탐라는도다(블렌딩) (100g)
-					<input type="number" size="5" value="0">개
-				</label>
-			</li>
-		</ul>
-	</fieldset>
-	<input type="submit" value="주문하기">
-	<input type="reset" value="다시 작성">
-
-	
+    </form>
 </body>
 </html>
