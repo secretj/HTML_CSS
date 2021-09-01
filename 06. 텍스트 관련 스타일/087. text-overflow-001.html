@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 넘침 조절</title>
+    <style>
+        .content {
+            border: 1px solid #ccc;
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        .content:hover {
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <!--p.align-left*4-->
+    <p class="content">
+        Integer elementum massa at ulla placerat varius.
+        Suspendisse in libero risus, in interdum massa.
+        Vestibulm ac leo vitae metus faucibus gravida ac in neque.
+        Nullam est eros, suscipi sed dictum quis, accumsan a ligula.
+    </p>
+</body>
+</html>
