@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border style</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            margin: 15px;
+            border-width: 5px;
+            /*position기본값이 relative이기 때문에 absolute(절대값)으로 바뀌지 않으면 텍스트 입력했을 때 박스가 움직임*/
+            /* position: absolute; */
+        }
+        .box1 {
+            border-style: solid;
+        }
+        .box2 {
+            border-style: dotted;
+        } 
+        .box3 {
+            border-style: dashed;
+        }
+        .box4 {
+            border-style: double;
+        }
+        .box5 {
+            border-style: groove;
+        } 
+        .box6 {
+            border-style: outset;
+        }
+        .box7 {
+            border-style: ridge;
+        }
+        h1{
+            /* color: white; */
+            /* opacity: 0; */
+            visibility: hidden;
+        }
+        div:hover>h1 {
+            text-align: center;
+            /* opacity: 100; */
+            visibility: visible;
+            /* color: pink; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"><h1>solid</h1></div>
+    <div class="box2"><h1>dotted</h1></div>
+    <div class="box3"><h1>dashed</h1></div>
+    <div class="box4"><h1>double</h1></div>
+    <div class="box5"><h1>groove</h1></div>
+    <div class="box6"><h1>outset</h1></div>
+    <div class="box7"><h1>ridge</h1></div>
+</body>
+</html>
